@@ -65471,6 +65471,12 @@
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TanksGameModeBase.h">
 			<Option target="FakeTarget"/>
 		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TestExample.cpp">
+			<Option target="FakeTarget"/>
+		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TestExample.h">
+			<Option target="FakeTarget"/>
+		</Unit>
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
