@@ -2,37 +2,37 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="UE4" targetName="Tanks-TVOS-DebugGame" />
-      <config projectName="UE4" targetName="TanksEditor-TVOS-Shipping" />
-      <config projectName="UE4" targetName="FakeTarget" />
-      <config projectName="UE4" targetName="UE4Game" />
-      <config projectName="UE4" targetName="TanksEditor-IOS" />
-      <config projectName="UE4" targetName="TanksEditor-TVOS" />
       <config projectName="UE4" targetName="UE4Game-TVOS-Shipping" />
-      <config projectName="UE4" targetName="Tanks-TVOS-Shipping" />
-      <config projectName="UE4" targetName="UE4Editor" />
-      <config projectName="UE4" targetName="TanksEditor-IOS-Shipping" />
-      <config projectName="UE4" targetName="Tanks-Mac-DebugGame" />
+      <config projectName="UE4" targetName="TanksEditor" />
+      <config projectName="UE4" targetName="Tanks-TVOS-DebugGame" />
+      <config projectName="UE4" targetName="TanksEditor-TVOS-DebugGame" />
+      <config projectName="UE4" targetName="Tanks-IOS-DebugGame" />
       <config projectName="UE4" targetName="UE4Game-TVOS-DebugGame" />
+      <config projectName="UE4" targetName="Tanks-TVOS" />
       <config projectName="UE4" targetName="UE4Game-Mac-Shipping" />
+      <config projectName="UE4" targetName="TanksEditor-IOS-Shipping" />
+      <config projectName="UE4" targetName="UE4Game-IOS-Shipping" />
+      <config projectName="UE4" targetName="TanksEditor-Mac-DebugGame" />
+      <config projectName="UE4" targetName="FakeTarget" />
+      <config projectName="UE4" targetName="UE4Editor" />
+      <config projectName="UE4" targetName="TanksEditor-TVOS" />
+      <config projectName="UE4" targetName="UE4Game-IOS" />
+      <config projectName="UE4" targetName="TanksEditor-Mac-Shipping" />
+      <config projectName="UE4" targetName="UE4Game-Mac-DebugGame" />
+      <config projectName="UE4" targetName="TanksEditor-IOS" />
+      <config projectName="UE4" targetName="Tanks-IOS" />
+      <config projectName="UE4" targetName="UE4Editor-Mac-Shipping" />
+      <config projectName="UE4" targetName="Tanks" />
       <config projectName="UE4" targetName="TanksEditor-IOS-DebugGame" />
       <config projectName="UE4" targetName="Tanks-Mac-Shipping" />
-      <config projectName="UE4" targetName="UE4Game-IOS-DebugGame" />
-      <config projectName="UE4" targetName="Tanks-IOS-DebugGame" />
-      <config projectName="UE4" targetName="UE4Game-IOS" />
-      <config projectName="UE4" targetName="TanksEditor-TVOS-DebugGame" />
-      <config projectName="UE4" targetName="Tanks-TVOS" />
-      <config projectName="UE4" targetName="Tanks" />
-      <config projectName="UE4" targetName="TanksEditor-Mac-DebugGame" />
+      <config projectName="UE4" targetName="Tanks-Mac-DebugGame" />
       <config projectName="UE4" targetName="UE4Editor-Mac-DebugGame" />
-      <config projectName="UE4" targetName="UE4Game-IOS-Shipping" />
-      <config projectName="UE4" targetName="UE4Game-TVOS" />
-      <config projectName="UE4" targetName="Tanks-IOS" />
+      <config projectName="UE4" targetName="UE4Game-IOS-DebugGame" />
       <config projectName="UE4" targetName="Tanks-IOS-Shipping" />
-      <config projectName="UE4" targetName="UE4Game-Mac-DebugGame" />
-      <config projectName="UE4" targetName="UE4Editor-Mac-Shipping" />
-      <config projectName="UE4" targetName="TanksEditor" />
-      <config projectName="UE4" targetName="TanksEditor-Mac-Shipping" />
+      <config projectName="UE4" targetName="TanksEditor-TVOS-Shipping" />
+      <config projectName="UE4" targetName="UE4Game" />
+      <config projectName="UE4" targetName="UE4Game-TVOS" />
+      <config projectName="UE4" targetName="Tanks-TVOS-Shipping" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -43,8 +43,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ae96458-2fbe-49e5-91fb-5acc36c36082" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/depend.internal.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/depend.internal.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/depend.make.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/depend.make.tmp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +53,35 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/Tanks/TanksGameModeBase.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/Tanks/TanksGameModeBase.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Source/Tanks/Tanks.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -69,10 +95,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1681" />
+    <option name="x" value="1680" />
     <option name="y" value="23" />
-    <option name="width" value="1420" />
-    <option name="height" value="1057" />
+    <option name="width" value="1428" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -309,36 +335,36 @@
     </configuration>
     <list>
       <item itemvalue="Application.FakeTarget" />
-      <item itemvalue="Application.Tanks" />
-      <item itemvalue="Application.Tanks-IOS" />
       <item itemvalue="Application.Tanks-IOS-DebugGame" />
       <item itemvalue="Application.Tanks-IOS-Shipping" />
+      <item itemvalue="Application.Tanks-IOS" />
       <item itemvalue="Application.Tanks-Mac-DebugGame" />
       <item itemvalue="Application.Tanks-Mac-Shipping" />
-      <item itemvalue="Application.Tanks-TVOS" />
       <item itemvalue="Application.Tanks-TVOS-DebugGame" />
       <item itemvalue="Application.Tanks-TVOS-Shipping" />
-      <item itemvalue="Application.TanksEditor" />
-      <item itemvalue="Application.TanksEditor-IOS" />
+      <item itemvalue="Application.Tanks-TVOS" />
       <item itemvalue="Application.TanksEditor-IOS-DebugGame" />
       <item itemvalue="Application.TanksEditor-IOS-Shipping" />
+      <item itemvalue="Application.TanksEditor-IOS" />
       <item itemvalue="Application.TanksEditor-Mac-DebugGame" />
       <item itemvalue="Application.TanksEditor-Mac-Shipping" />
-      <item itemvalue="Application.TanksEditor-TVOS" />
       <item itemvalue="Application.TanksEditor-TVOS-DebugGame" />
       <item itemvalue="Application.TanksEditor-TVOS-Shipping" />
-      <item itemvalue="Application.UE4Editor" />
+      <item itemvalue="Application.TanksEditor-TVOS" />
+      <item itemvalue="Application.TanksEditor" />
+      <item itemvalue="Application.Tanks" />
       <item itemvalue="Application.UE4Editor-Mac-DebugGame" />
       <item itemvalue="Application.UE4Editor-Mac-Shipping" />
-      <item itemvalue="Application.UE4Game" />
-      <item itemvalue="Application.UE4Game-IOS" />
+      <item itemvalue="Application.UE4Editor" />
       <item itemvalue="Application.UE4Game-IOS-DebugGame" />
       <item itemvalue="Application.UE4Game-IOS-Shipping" />
+      <item itemvalue="Application.UE4Game-IOS" />
       <item itemvalue="Application.UE4Game-Mac-DebugGame" />
       <item itemvalue="Application.UE4Game-Mac-Shipping" />
-      <item itemvalue="Application.UE4Game-TVOS" />
       <item itemvalue="Application.UE4Game-TVOS-DebugGame" />
       <item itemvalue="Application.UE4Game-TVOS-Shipping" />
+      <item itemvalue="Application.UE4Game-TVOS" />
+      <item itemvalue="Application.UE4Game" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -352,24 +378,20 @@
       <option name="presentableId" value="Default" />
       <updated>1544551451986</updated>
       <workItem from="1544551455011" duration="3146000" />
+      <workItem from="1544676327606" duration="104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3146000" />
+    <option name="totallyTimeSpent" value="3250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1681" y="23" width="1420" height="1057" extended-state="0" />
+    <frame x="58" y="23" width="1428" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25180376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32953367" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -377,20 +399,35 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Tanks.cpp">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/TestExample.cpp" />
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/TestExample.h" />
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/TanksGameModeBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -401,31 +438,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Tanks.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/TanksGameModeBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/TestExample.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/TestExample.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="75">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
