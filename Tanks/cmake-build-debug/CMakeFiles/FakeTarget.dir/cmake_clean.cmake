@@ -8125,7 +8125,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FakeTarget.dir/Users/Shared/Epic_Games/UE_4.21/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Private/ScreenshotTools.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/Tanks.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/TanksGameModeBase.cpp.o"
-  "CMakeFiles/FakeTarget.dir/Source/Tanks/TestExample.cpp.o"
+  "CMakeFiles/FakeTarget.dir/Source/Tanks/Player/TankPlayerController.cpp.o"
   "FakeTarget.pdb"
   "FakeTarget"
 )

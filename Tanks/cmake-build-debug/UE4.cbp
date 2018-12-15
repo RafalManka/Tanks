@@ -287,12 +287,6 @@
 					<Add option="-DIMPLEMENT_ENCRYPTION_KEY_REGISTRATION="/>
 					<Add option="-DIMPLEMENT_SIGNING_KEY_REGISTRATION="/>
 					<Add option="-DDEPRECATED_FORGAME=DEPRECATED"/>
-					<Add option="-DTANKS_API="/>
-					<Add option="-DUE_ENABLE_ICU=1"/>
-					<Add option="-DWITH_DIRECTXMATH=0"/>
-					<Add option="-DWITH_MALLOC_STOMP=1"/>
-					<Add option="-DCORE_API="/>
-					<Add option="-DCOREUOBJECT_API="/>
 					<Add option="-DINCLUDE_APEIRON=0"/>
 					<Add option="-DWITH_PHYSX=1"/>
 					<Add option="-DWITH_APEIRON=0"/>
@@ -306,6 +300,11 @@
 					<Add option="-DWITH_IMMEDIATE_PHYSX=0"/>
 					<Add option="-DGPUPARTICLE_LOCAL_VF_ONLY=0"/>
 					<Add option="-DENGINE_API="/>
+					<Add option="-DUE_ENABLE_ICU=1"/>
+					<Add option="-DWITH_DIRECTXMATH=0"/>
+					<Add option="-DWITH_MALLOC_STOMP=1"/>
+					<Add option="-DCORE_API="/>
+					<Add option="-DCOREUOBJECT_API="/>
 					<Add option="-DAPPLICATIONCORE_API="/>
 					<Add option="-DRHI_API="/>
 					<Add option="-DJSON_API="/>
@@ -400,6 +399,7 @@
 					<Add option="-DCLOTHINGSYSTEMRUNTIMEINTERFACE_API="/>
 					<Add option="-DNETWORKREPLAYSTREAMING_API="/>
 					<Add option="-DAUDIOMIXER_API="/>
+					<Add option="-DTANKS_API="/>
 					<Add option="-DWITH_LAUNCHERCHECK=0"/>
 					<Add option="-DUE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0"/>
 					<Add option="-DMOVIEPLAYER_API="/>
@@ -960,11 +960,30 @@
 					<Add option="-DRUNTIMETESTS_API="/>
 					<Add option="-DSCREENSHOTTOOLS_API="/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source"/>
-					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Intermediate/Build/Mac/UE4Editor/Inc/Tanks"/>
-					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source"/>
-					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Core"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Classes"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI/Navigation"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Analytics"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Animation"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Curves"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/EdGraph"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Internationalization"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Net"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/PacketHandlers"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Performance"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/Experimental"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/ImmediatePhysics"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/ProfilingDebugging"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Rendering"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Slate"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Tests"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/VisualLogger"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Core"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Core/Public"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Core"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Core/Public/Algo"/>
@@ -1005,28 +1024,6 @@
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/CoreUObject/Public/Serialization/Formatters"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/CoreUObject/Public/Templates"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/CoreUObject/Public/UObject"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Classes"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI/Navigation"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Analytics"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Animation"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Curves"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/EdGraph"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Internationalization"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Net"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/PacketHandlers"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Performance"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/Experimental"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/ImmediatePhysics"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/ProfilingDebugging"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Rendering"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Slate"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Tests"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/VisualLogger"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/ApplicationCore"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/ApplicationCore/Public"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/ApplicationCore"/>
@@ -1383,6 +1380,9 @@
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/AudioMixer"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/AudioMixer/Public/Components"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/AudioMixer/Public/DSP"/>
+					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Intermediate/Build/Mac/UE4Editor/Inc/Tanks"/>
+					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source"/>
+					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Launch/Private"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/MoviePlayer"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/MoviePlayer/Public"/>
@@ -3152,12 +3152,6 @@
 					<Add option="-DIMPLEMENT_ENCRYPTION_KEY_REGISTRATION="/>
 					<Add option="-DIMPLEMENT_SIGNING_KEY_REGISTRATION="/>
 					<Add option="-DDEPRECATED_FORGAME=DEPRECATED"/>
-					<Add option="-DTANKS_API="/>
-					<Add option="-DUE_ENABLE_ICU=1"/>
-					<Add option="-DWITH_DIRECTXMATH=0"/>
-					<Add option="-DWITH_MALLOC_STOMP=1"/>
-					<Add option="-DCORE_API="/>
-					<Add option="-DCOREUOBJECT_API="/>
 					<Add option="-DINCLUDE_APEIRON=0"/>
 					<Add option="-DWITH_PHYSX=1"/>
 					<Add option="-DWITH_APEIRON=0"/>
@@ -3171,6 +3165,11 @@
 					<Add option="-DWITH_IMMEDIATE_PHYSX=0"/>
 					<Add option="-DGPUPARTICLE_LOCAL_VF_ONLY=0"/>
 					<Add option="-DENGINE_API="/>
+					<Add option="-DUE_ENABLE_ICU=1"/>
+					<Add option="-DWITH_DIRECTXMATH=0"/>
+					<Add option="-DWITH_MALLOC_STOMP=1"/>
+					<Add option="-DCORE_API="/>
+					<Add option="-DCOREUOBJECT_API="/>
 					<Add option="-DAPPLICATIONCORE_API="/>
 					<Add option="-DRHI_API="/>
 					<Add option="-DJSON_API="/>
@@ -3265,6 +3264,7 @@
 					<Add option="-DCLOTHINGSYSTEMRUNTIMEINTERFACE_API="/>
 					<Add option="-DNETWORKREPLAYSTREAMING_API="/>
 					<Add option="-DAUDIOMIXER_API="/>
+					<Add option="-DTANKS_API="/>
 					<Add option="-DWITH_LAUNCHERCHECK=0"/>
 					<Add option="-DUE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0"/>
 					<Add option="-DMOVIEPLAYER_API="/>
@@ -3825,11 +3825,30 @@
 					<Add option="-DRUNTIMETESTS_API="/>
 					<Add option="-DSCREENSHOTTOOLS_API="/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source"/>
-					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Intermediate/Build/Mac/UE4Editor/Inc/Tanks"/>
-					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source"/>
-					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Core"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Classes"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI/Navigation"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Analytics"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Animation"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Curves"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/EdGraph"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Internationalization"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Net"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/PacketHandlers"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Performance"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/Experimental"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/ImmediatePhysics"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/ProfilingDebugging"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Rendering"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Slate"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Tests"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/VisualLogger"/>
+					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Core"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Core/Public"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Core"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Core/Public/Algo"/>
@@ -3870,28 +3889,6 @@
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/CoreUObject/Public/Serialization/Formatters"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/CoreUObject/Public/Templates"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/CoreUObject/Public/UObject"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/Engine"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Classes"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/AI/Navigation"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Analytics"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Animation"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Curves"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/EdGraph"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Internationalization"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Net"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/PacketHandlers"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Performance"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/Experimental"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Physics/ImmediatePhysics"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/ProfilingDebugging"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Rendering"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Slate"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/Tests"/>
-					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Public/VisualLogger"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/ApplicationCore"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/ApplicationCore/Public"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/ApplicationCore"/>
@@ -4248,6 +4245,9 @@
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/AudioMixer"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/AudioMixer/Public/Components"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/AudioMixer/Public/DSP"/>
+					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Intermediate/Build/Mac/UE4Editor/Inc/Tanks"/>
+					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source"/>
+					<Add directory="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Launch/Private"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Intermediate/Build/Mac/UE4Editor/Inc/MoviePlayer"/>
 					<Add directory="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/MoviePlayer/Public"/>
@@ -65456,6 +65456,12 @@
 		<Unit filename="/Users/Shared/Epic Games/UE_4.21/Engine/Source/Runtime/XmlParser/XmlParser.Build.cs">
 			<Option target="FakeTarget"/>
 		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Player/TankPlayerController.cpp">
+			<Option target="FakeTarget"/>
+		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Player/TankPlayerController.h">
+			<Option target="FakeTarget"/>
+		</Unit>
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Tanks.Build.cs">
 			<Option target="FakeTarget"/>
 		</Unit>
@@ -65469,12 +65475,6 @@
 			<Option target="FakeTarget"/>
 		</Unit>
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TanksGameModeBase.h">
-			<Option target="FakeTarget"/>
-		</Unit>
-		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TestExample.cpp">
-			<Option target="FakeTarget"/>
-		</Unit>
-		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TestExample.h">
 			<Option target="FakeTarget"/>
 		</Unit>
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/CMakeLists.txt">
