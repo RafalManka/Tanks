@@ -42,33 +42,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ae96458-2fbe-49e5-91fb-5acc36c36082" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/TankGameMode_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/TankGameMode_BP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Dirt_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Dirt_LayerInfo_flat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Dirt_LayerInfo_flat.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Flatland.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Flatland.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Grass_LayerInfo.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Grass_LayerInfo_flat.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Grass_LayerInfo_flat.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainLandscape_sharedassets/Landscape.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Tank/Tank_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Tank/Tank_BP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Tank/WithCollision/tank_fbx_Barrel.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Tank/WithCollision/tank_fbx_Body.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Tank/WithCollision/tank_fbx_Track.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Tank/WithCollision/tank_fbx_Turret.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Levels/MainLandscape.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Levels/PlayerUI.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Levels/TankPlayerController.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tanks.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Tanks.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/objects9.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FakeTarget.dir/objects9.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/UE4.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/UE4.cbp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,16 +55,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#94#118#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerController.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -108,11 +86,12 @@
       <list>
         <option value="$PROJECT_DIR$/Source/Tanks/TestExample.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/TestExample.h" />
+        <option value="$APPLICATION_CONFIG_DIR$/clion.vmoptions" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1698" />
+    <option name="x" value="18" />
     <option name="y" value="23" />
     <option name="width" value="1428" />
     <option name="height" value="1027" />
@@ -405,18 +384,20 @@
       <workItem from="1544551455011" duration="3146000" />
       <workItem from="1544676327606" duration="104000" />
       <workItem from="1544786060966" duration="537000" />
-      <workItem from="1544880800626" duration="691000" />
+      <workItem from="1544880800626" duration="796000" />
+      <workItem from="1544881866056" duration="110000" />
+      <workItem from="1544882105119" duration="751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4478000" />
+    <option name="totallyTimeSpent" value="5444000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1698" y="23" width="1428" height="1027" extended-state="0" />
+    <frame x="18" y="23" width="1428" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25901875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26623377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -429,7 +410,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32953367" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -475,17 +456,22 @@
     <entry file="file://$PROJECT_DIR$/../../../../../Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Classes/GameFramework/DefaultPawn.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerComponent.cpp">
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerComponent.cpp" />
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerComponent.h" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/clion.vmoptions">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerComponent.h">
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#94#118#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -493,13 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Player/TankPlayerController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
