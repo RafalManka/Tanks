@@ -15,16 +15,23 @@ UCLASS()
 class TANKS_API ATankPlayerController : public APlayerController {
     GENERATED_BODY()
 
-public:
+private:
+    void BeginPlay() override;
+
     virtual void Tick(float DeltaTime) override;
 
     ATank *GetControlledTank() const;
 
-    void BeginPlay() override;
+    FVector GetHitLocation();
 
-private:
-    void AimTowardsCrossHair();
+    FVector GetWorldDirection();
 
-    bool GetSightRayHitLocation(FVector &HitLocation) const;
+    UPROPERTY(EditAnywhere)
+    float CrossHairXLocation = 0.5;
 
+    UPROPERTY(EditAnywhere)
+    float CrossHairYLocation = 0.3333;
+
+    UPROPERTY(EditAnywhere)
+    float TraceRange = 10000000;
 };

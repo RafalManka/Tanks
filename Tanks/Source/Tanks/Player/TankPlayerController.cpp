@@ -9,39 +9,47 @@ ATank *ATankPlayerController::GetControlledTank() const {
 
 void ATankPlayerController::BeginPlay() {
     Super::BeginPlay();
-    auto ControlledTank = GetControlledTank();
-    if (!ControlledTank) {
-        UE_LOG(LogTemp, Warning, TEXT("Player controller not posessing a tank"));
-    } else {
-        UE_LOG(LogTemp, Warning, TEXT("Player controller posessing %s"), *(ControlledTank->GetName()));
-    }
 }
 
 void ATankPlayerController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
-    UE_LOG(LogTemp, Warning, TEXT("ATankPlayerController Tick"));
-    AimTowardsCrossHair();
-}
-
-bool ATankPlayerController::GetSightRayHitLocation(FVector &HitLocation) const {
-    HitLocation = FVector(1.0);
-    if (HitLocation.X == 1.0) {
-        return true;
-    }
-    return false;
-}
-
-void ATankPlayerController::AimTowardsCrossHair() {
     auto Tank = GetControlledTank();
-    if (!Tank) { return; }
-
-    FVector HitLocation;
-    if (GetSightRayHitLocation(HitLocation)) {
-        UE_LOG(LogTemp, Warning, TEXT("Hit location = %s"), *(HitLocation.ToString()));
-
-        // Get world location through crosshair
-        // if it hits the landscape
-        // tell controlled tank to aim at this point
+    if (Tank) {
+        Tank->AimAt(GetHitLocation());
     }
-
 }
+
+FVector ATankPlayerController::GetHitLocation() {
+    FVector Start = PlayerCameraManager->GetCameraLocation();
+    FVector End = Start + (GetWorldDirection() * TraceRange);
+
+    FHitResult HitResult;
+    GetWorld()->LineTraceSingleByChannel(
+            OUT HitResult,
+            Start,
+            End,
+            ECollisionChannel::ECC_Visibility
+    );
+    return HitResult.Location;
+}
+
+FVector ATankPlayerController::GetWorldDirection() {
+    int32 ViewPortSizeX, ViewPortSizeY;
+    GetViewportSize(ViewPortSizeX, ViewPortSizeY);
+    auto ScreenLocation = FVector2D(
+            ViewPortSizeX * CrossHairXLocation,
+            ViewPortSizeY * CrossHairYLocation
+    );
+
+    FVector CameraDirection;
+    FVector WorldDirection;
+    DeprojectScreenPositionToWorld(
+            ScreenLocation.X,
+            ScreenLocation.Y,
+            OUT CameraDirection,
+            OUT WorldDirection
+    );
+
+    return WorldDirection;
+}
+
