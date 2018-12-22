@@ -13,9 +13,23 @@ void ATankPlayerController::BeginPlay() {
 
 void ATankPlayerController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
-    auto Tank = GetControlledTank();
-    if (Tank) {
-        Tank->AimAt(GetHitLocation());
+    auto PlayerTank = GetControlledTank();
+    if (PlayerTank) {
+        PlayerTank->AimAt(GetHitLocation());
+
+
+        FVector LinkStart = PlayerTank->GetActorLocation();
+        FVector LinkEnd = GetHitLocation();
+        DrawDebugLine(
+                GetWorld(),
+                LinkStart,
+                LinkEnd,
+                FColor(255,0,0),
+                false,
+                -1,
+                0,
+                12.333
+        );
     }
 }
 

@@ -5,6 +5,7 @@
 #include "Tanks/Pawn/Tank.h"
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "Runtime/Engine/Public/DrawDebugHelpers.h"
 #include "TankAIController.generated.h"
 
 /**

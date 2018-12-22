@@ -65468,6 +65468,12 @@
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Tank.h">
 			<Option target="FakeTarget"/>
 		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TankAimingComponent.cpp">
+			<Option target="FakeTarget"/>
+		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TankAimingComponent.h">
+			<Option target="FakeTarget"/>
+		</Unit>
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Player/TankPlayerController.cpp">
 			<Option target="FakeTarget"/>
 		</Unit>

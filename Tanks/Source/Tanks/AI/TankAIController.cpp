@@ -18,14 +18,24 @@ void ATankAIController::Tick(float DeltaTime) {
     auto PlayerTank = GetPlayerTank();
     if (AITank && PlayerTank){
         AITank->AimAt(PlayerTank->GetActorLocation());
+
+
+        FVector LinkStart = AITank->GetActorLocation();
+        FVector LinkEnd = PlayerTank->GetActorLocation();
+        DrawDebugLine(
+                GetWorld(),
+                LinkStart,
+                LinkEnd,
+                FColor(255,0,255),
+                false,
+                -1,
+                0,
+                12.333
+        );
     }
+
 }
 
 void ATankAIController::BeginPlay() {
     Super::BeginPlay();
-//    if (!PlayerTank) {
-//        UE_LOG(LogTemp, Warning, TEXT("TankAIController can't find a player tank"));
-//    } else {
-//        UE_LOG(LogTemp, Warning, TEXT("TankAIController found player tank %s"), *(PlayerTank->GetName()));
-//    }
 }
