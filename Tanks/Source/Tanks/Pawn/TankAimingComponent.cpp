@@ -7,7 +7,7 @@ UTankAimingComponent::UTankAimingComponent() {
 }
 
 void UTankAimingComponent::SetBarrelReference(UTankBarrel *BarrelToSet) {
-    this->Barrel = BarrelToSet;
+    Barrel = BarrelToSet;
 }
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
@@ -20,7 +20,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
             Barrel->GetSocketLocation(FName("projectile")),
             HitLocation,
             LaunchSpeed,
-            true,
+            false,
             0,
             0,
             ESuggestProjVelocityTraceOption::DoNotTrace
@@ -28,6 +28,12 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
 
     if (SuggestionObtained) {
         MoveBarrel(AimingDirection);
+    } else {
+        UE_LOG(
+                LogTemp,
+                Warning,
+                TEXT("SuggestProjectileVelocity failed")
+        );
     }
 
 }
