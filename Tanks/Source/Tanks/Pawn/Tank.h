@@ -19,14 +19,12 @@ protected:
     UTankAimingComponent *TankAimingComponent = nullptr;
 
     UFUNCTION(BlueprintCallable, Category = Setup)
-    void SetBarrelReference(UStaticMeshComponent *BarrelToSet);
+    void SetBarrelReference(UTankBarrel *BarrelToSet);
 
 private:
     ATank();
 
     virtual void BeginPlay() override;
-
-    virtual void Tick(float DeltaTime) override;
 
     virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 

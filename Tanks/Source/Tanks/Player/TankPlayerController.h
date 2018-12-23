@@ -5,7 +5,7 @@
 #include "Tanks/Pawn/Tank.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "Runtime/Engine/Public/DrawDebugHelpers.h"
+#include "DrawDebugHelpers.h"
 #include "TankPlayerController.generated.h"
 
 /**
