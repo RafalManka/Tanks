@@ -29,11 +29,11 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
     if (SuggestionObtained) {
         MoveBarrel(AimingDirection);
     } else {
-        UE_LOG(
-                LogTemp,
-                Warning,
-                TEXT("SuggestProjectileVelocity failed")
-        );
+//        UE_LOG(
+//                LogTemp,
+//                Warning,
+//                TEXT("SuggestProjectileVelocity failed")
+//        );
     }
 
 }
@@ -41,7 +41,8 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
 void UTankAimingComponent::MoveBarrel(FVector AimingDirection) {
     auto BarrelRotation = Barrel->GetForwardVector().Rotation();
     auto AimRotation = AimingDirection.Rotation();
-    Barrel->Elevate(1.f);
+    auto DeltaRotator = AimRotation - BarrelRotation;
+    Barrel->Elevate(DeltaRotator.Pitch);
 }
 
 void UTankAimingComponent::BeginPlay() {
