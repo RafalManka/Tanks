@@ -2,14 +2,11 @@
 
 #pragma once
 
-#include "TankBarrel.h"
-#include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include <EngineClasses.h>
 #include "Components/ActorComponent.h"
 #include "TankAimingComponent.generated.h"
 
 class UTankBarrel;
+class UTurretComponent;
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 
@@ -21,6 +18,8 @@ public:
 
     void SetBarrelReference(UTankBarrel *BarrelToSet);
 
+    void SetTurretReference(UTurretComponent *TurretToSet);
+
     virtual void AimAt(FVector HitLocation, float LaunchSpeed);
 
     virtual void
@@ -31,6 +30,8 @@ protected:
 
 private:
     UTankBarrel *Barrel = nullptr;
+
+    UTurretComponent *Turret = nullptr;
 
     void MoveBarrel(FVector AimingDirection);
 
