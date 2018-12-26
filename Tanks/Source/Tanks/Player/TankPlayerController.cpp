@@ -17,7 +17,6 @@ void ATankPlayerController::Tick(float DeltaTime) {
     if (PlayerTank) {
         PlayerTank->AimAt(GetHitLocation());
 
-
         FVector LinkStart = PlayerTank->GetActorLocation();
         FVector LinkEnd = GetHitLocation();
         DrawDebugLine(

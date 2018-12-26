@@ -22,6 +22,8 @@ public:
 
     virtual void AimAt(FVector HitLocation, float LaunchSpeed);
 
+    void MoveBarrel(FVector AimingDirection);
+
     virtual void
     TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 
@@ -32,7 +34,5 @@ private:
     UTankBarrel *Barrel = nullptr;
 
     UTurretComponent *Turret = nullptr;
-
-    void MoveBarrel(FVector AimingDirection);
 
 };

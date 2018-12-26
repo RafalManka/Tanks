@@ -19,6 +19,7 @@ void UTankAimingComponent::SetTurretReference(UTurretComponent *TurretToSet) {
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
     if (!Barrel) { return; }
+    if (!Turret) { return; }
 
     FVector AimingDirection;
     auto SuggestionObtained = UGameplayStatics::SuggestProjectileVelocity(
@@ -35,17 +36,16 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
 
     if (SuggestionObtained) {
         MoveBarrel(AimingDirection);
-    } else {
+    }
+}
+
+void UTankAimingComponent::MoveBarrel(FVector AimingDirection) {
 //        UE_LOG(
 //                LogTemp,
 //                Warning,
 //                TEXT("SuggestProjectileVelocity failed")
 //        );
-    }
 
-}
-
-void UTankAimingComponent::MoveBarrel(FVector AimingDirection) {
     auto AimRotation = AimingDirection.Rotation();
     auto BarrelRotation = Barrel->GetForwardVector().Rotation();
     auto DeltaRotator = AimRotation - BarrelRotation;
