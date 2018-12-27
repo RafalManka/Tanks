@@ -8126,6 +8126,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FakeTarget.dir/Source/Tanks/Tanks.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/TanksGameModeBase.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/AI/TankAIController.cpp.o"
+  "CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Projectile.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Tank.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TankAimingComponent.cpp.o"
   "CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TankBarrel.cpp.o"

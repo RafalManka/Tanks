@@ -65462,6 +65462,12 @@
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/AI/TankAIController.h">
 			<Option target="FakeTarget"/>
 		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Projectile.cpp">
+			<Option target="FakeTarget"/>
+		</Unit>
+		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Projectile.h">
+			<Option target="FakeTarget"/>
+		</Unit>
 		<Unit filename="/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Tank.cpp">
 			<Option target="FakeTarget"/>
 		</Unit>

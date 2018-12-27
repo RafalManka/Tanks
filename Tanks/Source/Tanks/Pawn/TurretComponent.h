@@ -9,13 +9,14 @@
 /**
  * 
  */
-UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent), hidecategories = ("Collision"))
-
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent)) //, hidecategories = ("Collision"))
 class TANKS_API UTurretComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 
 public:
     void Rotate(float RelativeSpeed);
+
+    void Fire();
 
     UPROPERTY(EditAnywhere, Category = Setup)
     float MaxDegreesPerSecond = 5.;
