@@ -23,6 +23,10 @@ class TANKS_API ATank : public APawn {
 public:
     virtual void AimAt(FVector HitLocation);
 
+    UFUNCTION(BlueprintCallable, Category = Setup)
+
+    void Fire();
+
 protected:
     UTankAimingComponent *TankAimingComponent = nullptr;
 
@@ -34,9 +38,6 @@ protected:
 
     void SetTurretReference(UTurretComponent *TurretToSet);
 
-    UFUNCTION(BlueprintCallable, Category = Setup)
-
-    void Fire();
 
 private:
     ATank();
@@ -50,6 +51,11 @@ private:
 
     UPROPERTY(EditAnywhere, Category = Setup)
     TSubclassOf<AProjectile> ProjectileBlueprint;
+
+    UPROPERTY(EditAnywhere, Category = Setup)
+    double ReloadTimeSeconds = 3;
+
+    double LastFire = 0;
 
     UTankBarrel *Barrel = nullptr;
 };

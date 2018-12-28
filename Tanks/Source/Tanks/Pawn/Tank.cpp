@@ -2,10 +2,9 @@
 
 #include "Tank.h"
 #include "TankBarrel.h"
-#include "Projectile.h"
+#include "Tanks/Pawn/Projectile/Projectile.h"
 #include "TankAimingComponent.h"
 
-// Sets default values
 ATank::ATank() {
     TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Tank Aiming Component"));
 }
@@ -23,17 +22,19 @@ void ATank::AimAt(FVector HitLocation) {
     TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
 
+
 void ATank::Fire() {
+    auto IsReloaded = (FPlatformTime::Seconds() - LastFire) > ReloadTimeSeconds;
+    if (!IsReloaded) { return; }
+    LastFire = FPlatformTime::Seconds();
+
     if (!Barrel) { return; }
-
-    UE_LOG(LogTemp, Warning, TEXT("Fire with Barrel!"));
-
-    GetWorld()->SpawnActor<AProjectile>(
+    auto Projectile = GetWorld()->SpawnActor<AProjectile>(
             ProjectileBlueprint,
             Barrel->GetSocketLocation(FName("Projectile")),
             Barrel->GetSocketRotation(FName("Projectile"))
     );
-    //TankAimingComponent->Fire();
+    Projectile->Launch(LaunchSpeed);
 }
 
 void ATank::BeginPlay() {
