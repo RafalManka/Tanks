@@ -4,14 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/AI/TankAIController.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/AI/TankAIController.cpp.o"
-  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Projectile.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Projectile.cpp.o"
+  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/AI/TankAIController.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/AI/TankAIController.cpp.o"
+  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Player/TankPlayerController.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Player/TankPlayerController.cpp.o"
+  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Projectile/Projectile.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Projectile/Projectile.cpp.o"
+  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Projectile/TankProjectileMovement.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Projectile/TankProjectileMovement.cpp.o"
   "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/Tank.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/Tank.cpp.o"
   "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TankAimingComponent.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TankAimingComponent.cpp.o"
   "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TankBarrel.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TankBarrel.cpp.o"
-  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TankProjectileMovement.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TankProjectileMovement.cpp.o"
+  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TankTrackComponent.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TankTrackComponent.cpp.o"
   "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Pawn/TurretComponent.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Pawn/TurretComponent.cpp.o"
-  "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Player/TankPlayerController.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Player/TankPlayerController.cpp.o"
   "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/Tanks.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/Tanks.cpp.o"
   "/Users/rafalmanka/Development/unreal/Tanks/Tanks/Source/Tanks/TanksGameModeBase.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Source/Tanks/TanksGameModeBase.cpp.o"
   "/Users/Shared/Epic Games/UE_4.21/Engine/Plugins/2D/Paper2D/Source/Paper2D/Private/GroupedSpriteSceneProxy.cpp" "/Users/rafalmanka/Development/unreal/Tanks/Tanks/cmake-build-debug/CMakeFiles/FakeTarget.dir/Users/Shared/Epic_Games/UE_4.21/Engine/Plugins/2D/Paper2D/Source/Paper2D/Private/GroupedSpriteSceneProxy.cpp.o"
