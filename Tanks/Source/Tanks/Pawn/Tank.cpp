@@ -8,7 +8,7 @@
 
 ATank::ATank() {
     TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Tank Aiming Component"));
-    TankMovementComponent = CreateDefaultSubobject<UTankMovementComponent>(FName("Tank Movement Component"));
+    //TankMovementComponent = CreateDefaultSubobject<UTankMovementComponent>(FName("Tank Movement Component"));
 }
 
 void ATank::SetTurretReference(UTurretComponent *TurretToSet) {
