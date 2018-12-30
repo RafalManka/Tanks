@@ -15,6 +15,8 @@ class UTurretComponent;
 
 class AProjectile;
 
+class UTankMovementComponent;
+
 UCLASS()
 
 class TANKS_API ATank : public APawn {
@@ -29,6 +31,7 @@ public:
 
 protected:
     UTankAimingComponent *TankAimingComponent = nullptr;
+    UTankMovementComponent *TankMovementComponent = nullptr;
 
     UFUNCTION(BlueprintCallable, Category = Setup)
 
@@ -38,6 +41,9 @@ protected:
 
     void SetTurretReference(UTurretComponent *TurretToSet);
 
+    UFUNCTION(BlueprintCallable, Category = Setup)
+
+    void IntendMoveForward(float Throw);
 
 private:
     ATank();

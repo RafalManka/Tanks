@@ -2,11 +2,13 @@
 
 #include "Tank.h"
 #include "TankBarrel.h"
+#include "TankMovementComponent.h"
 #include "Tanks/Pawn/Projectile/Projectile.h"
 #include "TankAimingComponent.h"
 
 ATank::ATank() {
     TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Tank Aiming Component"));
+    TankMovementComponent = CreateDefaultSubobject<UTankMovementComponent>(FName("Tank Movement Component"));
 }
 
 void ATank::SetTurretReference(UTurretComponent *TurretToSet) {
@@ -43,6 +45,9 @@ void ATank::BeginPlay() {
 
 void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent) {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
+void ATank::IntendMoveForward(float Throw) {
+    if (!TankMovementComponent) { return; }
+    TankMovementComponent->IntendMoveForward(Throw);
+}
