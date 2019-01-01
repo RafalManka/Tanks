@@ -44,9 +44,11 @@
     <list default="true" id="9ae96458-2fbe-49e5-91fb-5acc36c36082" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Battleground/MainLandscape.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Battleground/MainLandscape.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Battleground/PlayerUI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Battleground/PlayerUI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Battleground/TankPlayerController_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Battleground/TankPlayerController_BP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -59,11 +61,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#80#114#0" expanded="true" />
               </folding>
@@ -72,66 +74,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="46" selection-start-line="46" selection-end-line="50" selection-end-column="12" />
-              <folding>
-                <element signature="e#80#112#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="94" />
-              <folding>
-                <element signature="e#94#118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-              <folding>
-                <element signature="e#80#109#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../../Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Private/Components/NavMovementComponent.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../../Shared/Epic Games/UE_4.21/Engine/Source/Runtime/Engine/Classes/GameFramework/NavMovementComponent.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.h">
+        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="26" />
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="e#94#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="e#94#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+              <folding>
+                <element signature="e#94#132#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +129,7 @@
       <find>Intend to g</find>
       <find>RequestDire</find>
       <find>UE_LOG(</find>
+      <find>UPROPERTY(</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/Source</dir>
@@ -177,22 +150,22 @@
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankBarrel.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/Player/TankPlayerController.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TurretComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h" />
-        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Projectile/TankProjectileMovement.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Projectile/Projectile.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankBarrel.h" />
-        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TurretComponent.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankTrackComponent.h" />
-        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Tank.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankTrackComponent.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Projectile/Projectile.cpp" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/AI/TankAIController.cpp" />
-        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h" />
         <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h" />
+        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h" />
+        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h" />
+        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h" />
       </list>
     </option>
   </component>
@@ -243,33 +216,6 @@
               <item name="Source" type="462c0819:PsiDirectoryNode" />
               <item name="Tanks" type="462c0819:PsiDirectoryNode" />
               <item name="Pawn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UE4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tanks" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Tanks" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="Tanks" type="462c0819:PsiDirectoryNode" />
-              <item name="Pawn" type="462c0819:PsiDirectoryNode" />
-              <item name="AI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UE4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tanks" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Tanks" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="Tanks" type="462c0819:PsiDirectoryNode" />
-              <item name="Pawn" type="462c0819:PsiDirectoryNode" />
-              <item name="Player" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UE4" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tanks" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="Tanks" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="Tanks" type="462c0819:PsiDirectoryNode" />
-              <item name="Pawn" type="462c0819:PsiDirectoryNode" />
-              <item name="Projectile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UE4" type="b2602c69:ProjectViewProjectNode" />
@@ -550,12 +496,12 @@
       <workItem from="1546034644169" duration="7944000" />
       <workItem from="1546197023501" duration="3448000" />
       <workItem from="1546208580373" duration="972000" />
-      <workItem from="1546270126977" duration="2988000" />
+      <workItem from="1546270126977" duration="5863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93767000" />
+    <option name="totallyTimeSpent" value="96642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="57" width="1428" height="993" extended-state="0" />
@@ -696,32 +642,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/tankTrack.h" />
     <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/tankTrack.cpp" />
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="e#94#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Tank.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#80#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#94#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -771,16 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#94#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Projectile/TankProjectileMovement.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -794,16 +710,6 @@
           <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
             <element signature="e#80#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#80#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,16 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="94" />
-          <folding>
-            <element signature="e#94#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../Shared/Epic Games/UE_4.21/Engine/Plugins/Runtime/Steam/SteamVR/Source/SteamVR/Private/SteamVRHMD.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -859,22 +755,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.cpp">
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="46" selection-start-line="46" selection-end-line="50" selection-end-column="12" />
+        <state relative-caret-position="360">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
-            <element signature="e#80#112#0" expanded="true" />
+            <element signature="e#94#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#80#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Tank.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#94#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankMovementComponent.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#80#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/Player/TankPlayerController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#94#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="e#80#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/Tanks/Pawn/TankAimingComponent.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding>
+            <element signature="e#94#132#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -20,25 +20,26 @@ public:
 
     UTankMovementComponent();
 
-    UFUNCTION(BlueprintCallable, Category = Setup)
+    UFUNCTION(BlueprintCallable, Category = "Setup")
 
     void IntendMoveForward(float Throw);
 
-    UFUNCTION(BlueprintCallable, Category = Setup)
+    UFUNCTION(BlueprintCallable, Category = "Setup")
 
     void Initialize(UTankTrackComponent *LeftTrack, UTankTrackComponent *RightTrack);
 
-    UFUNCTION(BlueprintCallable, Category = Setup)
+    UFUNCTION(BlueprintCallable, Category = "Setup")
 
     void IntendTurnRight(float Throw);
 
-    UFUNCTION(BlueprintCallable, Category = Setup)
+    UFUNCTION(BlueprintCallable, Category = "Setup")
 
     void IntendTurnLeft(float Throw);
 
-    virtual void RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) override;
-
 private:
+
+    virtual void RequestDirectMove(const FVector &MoveVelocity, bool bForceMaxSpeed) override;
+
     UTankTrackComponent *LeftTrack = nullptr;
 
     UTankTrackComponent *RightTrack = nullptr;
