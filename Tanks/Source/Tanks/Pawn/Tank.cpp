@@ -7,29 +7,23 @@
 #include "TankAimingComponent.h"
 
 ATank::ATank() {
-    TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Tank Aiming Component"));
-    //TankMovementComponent = CreateDefaultSubobject<UTankMovementComponent>(FName("Tank Movement Component"));
-}
-
-void ATank::SetTurretReference(UTurretComponent *TurretToSet) {
-    TankAimingComponent->SetTurretReference(TurretToSet);
-}
-
-void ATank::SetBarrelReference(UTankBarrel *BarrelToSet) {
-    TankAimingComponent->SetBarrelReference(BarrelToSet);
-    Barrel = BarrelToSet;
+    PrimaryActorTick.bCanEverTick = false;
 }
 
 void ATank::AimAt(FVector HitLocation) {
+    auto TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
+    if (!ensure(TankAimingComponent)) { return; }
     TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
-
 
 void ATank::Fire() {
     auto IsReloaded = (FPlatformTime::Seconds() - LastFire) > ReloadTimeSeconds;
     if (!IsReloaded) { return; }
     LastFire = FPlatformTime::Seconds();
 
+    UE_LOG(LogTemp, Warning, TEXT("RAFMAN Fire"));
+
+    auto Barrel = FindComponentByClass<UTankBarrel>();
     if (!Barrel) { return; }
     auto Projectile = GetWorld()->SpawnActor<AProjectile>(
             ProjectileBlueprint,
@@ -37,17 +31,4 @@ void ATank::Fire() {
             Barrel->GetSocketRotation(FName("Projectile"))
     );
     Projectile->Launch(LaunchSpeed);
-}
-
-void ATank::BeginPlay() {
-    Super::BeginPlay();
-}
-
-void ATank::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent) {
-    Super::SetupPlayerInputComponent(PlayerInputComponent);
-}
-
-void ATank::IntendMoveForward(float Throw) {
-    if (!TankMovementComponent) { return; }
-    TankMovementComponent->IntendMoveForward(Throw);
 }

@@ -22,9 +22,8 @@ class TANKS_API UTankAimingComponent : public UActorComponent {
 public:
     UTankAimingComponent();
 
-    void SetBarrelReference(UTankBarrel *BarrelToSet);
-
-    void SetTurretReference(UTurretComponent *TurretToSet);
+    UFUNCTION(BlueprintCallable, Category = "Setup")
+    void Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet);
 
     void Fire();
 
@@ -32,14 +31,10 @@ public:
 
     void MoveBarrel(FVector AimingDirection);
 
-    virtual void
-    TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
-
 protected:
-    virtual void BeginPlay() override;
 
     UPROPERTY(BlueprintReadOnly, Category = "State")
-    EFiringStatus FiringStatus = EFiringStatus::Reloading;
+    EFiringStatus FiringStatus = EFiringStatus::Locked;
 
 private:
     UTankBarrel *Barrel = nullptr;

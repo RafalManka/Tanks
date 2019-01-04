@@ -29,31 +29,15 @@ public:
 
     void Fire();
 
-protected:
-    UPROPERTY(BlueprintReadOnly, Category = "Aiming")
-    UTankAimingComponent *TankAimingComponent = nullptr;
-
-    UPROPERTY(BlueprintReadOnly, Category = Firing)
-    UTankMovementComponent *TankMovementComponent = nullptr;
-
-    UFUNCTION(BlueprintCallable, Category = Setup)
-
-    void SetBarrelReference(UTankBarrel *BarrelToSet);
-
-    UFUNCTION(BlueprintCallable, Category = Setup)
-
-    void SetTurretReference(UTurretComponent *TurretToSet);
-
-    UFUNCTION(BlueprintCallable, Category = Setup)
-
-    void IntendMoveForward(float Throw);
+//protected:
+//    UPROPERTY(BlueprintReadOnly, Category = "Aiming")
+//    UTankAimingComponent *TankAimingComponent = nullptr;
+//
+//    UPROPERTY(BlueprintReadOnly, Category = "Firing")
+//    UTankMovementComponent *TankMovementComponent = nullptr;
 
 private:
     ATank();
-
-    virtual void BeginPlay() override;
-
-    virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 
     UPROPERTY(EditAnywhere, Category = Firing)
     float LaunchSpeed = 100 * 1000;
@@ -66,5 +50,4 @@ private:
 
     double LastFire = 0;
 
-    UTankBarrel *Barrel = nullptr;
 };

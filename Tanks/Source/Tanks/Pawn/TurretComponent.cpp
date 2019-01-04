@@ -10,7 +10,6 @@ void UTurretComponent::Rotate(float RelativeSpeed) {
     SetRelativeRotation(FRotator(0, Rotation, 0));
 }
 
-
 void UTurretComponent::Fire() {
     UE_LOG(
             LogTemp,

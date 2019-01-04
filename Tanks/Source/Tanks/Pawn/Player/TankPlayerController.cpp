@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TankPlayerController.h"
+#include "Pawn/TankAimingComponent.h"
 #include "Pawn/Tank.h"
 
 ATank *ATankPlayerController::GetControlledTank() const {
@@ -9,12 +10,19 @@ ATank *ATankPlayerController::GetControlledTank() const {
 
 void ATankPlayerController::BeginPlay() {
     Super::BeginPlay();
+    auto AimingComponent = GetControlledTank()->FindComponentByClass<UTankAimingComponent>();
+    if (AimingComponent) {
+        FoundAimingComponent(AimingComponent);
+        return;
+    } else {
+        UE_LOG(LogTemp, Warning, TEXT("Player Controller Can't find AimingComponent"));
+    }
 }
 
 void ATankPlayerController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
     auto PlayerTank = GetControlledTank();
-    if (PlayerTank) {
+    if (ensure(PlayerTank)) {
         PlayerTank->AimAt(GetHitLocation());
 
         FVector LinkStart = PlayerTank->GetActorLocation();
@@ -23,7 +31,7 @@ void ATankPlayerController::Tick(float DeltaTime) {
                 GetWorld(),
                 LinkStart,
                 LinkEnd,
-                FColor(255,0,0),
+                FColor(255, 0, 0),
                 false,
                 -1,
                 0,

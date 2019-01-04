@@ -9,22 +9,21 @@ UTankAimingComponent::UTankAimingComponent() {
     PrimaryComponentTick.bCanEverTick = false;
 }
 
-void UTankAimingComponent::SetBarrelReference(UTankBarrel *BarrelToSet) {
+void UTankAimingComponent::Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet) {
+    if (!ensure(BarrelToSet)) { return; }
+    if (!ensure(TurretToSet)) { return; }
     Barrel = BarrelToSet;
-}
-
-void UTankAimingComponent::SetTurretReference(UTurretComponent *TurretToSet) {
     Turret = TurretToSet;
 }
 
 void UTankAimingComponent::Fire() {
+    if (!ensure(Turret)) { return; }
     Turret->Fire();
 }
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
-    if (!Barrel) { return; }
-    if (!Turret) { return; }
-
+    if (!ensure(Barrel)) { return; }
+    if (!ensure(Turret)) { return; }
     FVector AimingDirection;
     auto SuggestionObtained = UGameplayStatics::SuggestProjectileVelocity(
             this,
@@ -44,30 +43,9 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
 }
 
 void UTankAimingComponent::MoveBarrel(FVector AimingDirection) {
-//        UE_LOG(
-//                LogTemp,
-//                Warning,
-//                TEXT("SuggestProjectileVelocity failed")
-//        );
-
     auto AimRotation = AimingDirection.Rotation();
     auto BarrelRotation = Barrel->GetForwardVector().Rotation();
     auto DeltaRotator = AimRotation - BarrelRotation;
     Barrel->Elevate(DeltaRotator.Pitch);
     Turret->Rotate(DeltaRotator.Yaw);
 }
-
-void UTankAimingComponent::BeginPlay() {
-    Super::BeginPlay();
-    // ...
-}
-
-void UTankAimingComponent::TickComponent(
-        float DeltaTime,
-        ELevelTick TickType,
-        FActorComponentTickFunction *ThisTickFunction
-) {
-    Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-    // ...
-}
-
