@@ -2,7 +2,6 @@
 
 #include "Tank.h"
 #include "TankBarrel.h"
-#include "TankMovementComponent.h"
 #include "Tanks/Pawn/Projectile/Projectile.h"
 #include "TankAimingComponent.h"
 
@@ -19,12 +18,9 @@ void ATank::AimAt(FVector HitLocation) {
 void ATank::Fire() {
     auto IsReloaded = (FPlatformTime::Seconds() - LastFire) > ReloadTimeSeconds;
     if (!IsReloaded) { return; }
-    LastFire = FPlatformTime::Seconds();
-
-    UE_LOG(LogTemp, Warning, TEXT("RAFMAN Fire"));
-
     auto Barrel = FindComponentByClass<UTankBarrel>();
     if (!Barrel) { return; }
+    LastFire = FPlatformTime::Seconds();
     auto Projectile = GetWorld()->SpawnActor<AProjectile>(
             ProjectileBlueprint,
             Barrel->GetSocketLocation(FName("Projectile")),

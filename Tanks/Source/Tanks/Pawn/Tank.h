@@ -6,7 +6,6 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
-// Forward declarations
 class UTankBarrel;
 
 class UTankAimingComponent;
@@ -14,8 +13,6 @@ class UTankAimingComponent;
 class UTurretComponent;
 
 class AProjectile;
-
-class UTankMovementComponent;
 
 UCLASS()
 
@@ -28,13 +25,6 @@ public:
     UFUNCTION(BlueprintCallable, Category = Setup)
 
     void Fire();
-
-//protected:
-//    UPROPERTY(BlueprintReadOnly, Category = "Aiming")
-//    UTankAimingComponent *TankAimingComponent = nullptr;
-//
-//    UPROPERTY(BlueprintReadOnly, Category = "Firing")
-//    UTankMovementComponent *TankMovementComponent = nullptr;
 
 private:
     ATank();
