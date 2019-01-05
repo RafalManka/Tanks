@@ -7,8 +7,6 @@
 #include "DrawDebugHelpers.h"
 #include "TankPlayerController.generated.h"
 
-class ATank;
-
 class UTankAimingComponent;
 /**
  * Responsible for letting the player play
@@ -19,9 +17,6 @@ class TANKS_API ATankPlayerController : public APlayerController {
     GENERATED_BODY()
 
 protected:
-    UFUNCTION(BlueprintCallable, Category = "Setup")
-
-    ATank *GetControlledTank() const;
 
     UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 
@@ -44,4 +39,7 @@ private:
 
     UPROPERTY(EditDefaultsOnly)
     float TraceRange = 10000000;
+
+    UPROPERTY(EditAnywhere, Category = Firing)
+    float LaunchSpeed = 100 * 1000;
 };

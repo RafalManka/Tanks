@@ -14,6 +14,8 @@ class UTankBarrel;
 
 class UTurretComponent;
 
+//class AProjectile;
+
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 
 class TANKS_API UTankAimingComponent : public UActorComponent {
@@ -25,6 +27,7 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Setup")
     void Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet);
 
+    UFUNCTION(BlueprintCallable, Category = "Setup")
     void Fire();
 
     virtual void AimAt(FVector HitLocation, float LaunchSpeed);

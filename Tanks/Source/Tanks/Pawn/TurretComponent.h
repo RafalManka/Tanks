@@ -6,6 +6,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "TurretComponent.generated.h"
 
+class AProjectile;
+
 /**
  * 
  */
@@ -26,4 +28,16 @@ public:
 
     UPROPERTY(EditDefaultsOnly, Category = Setup)
     float MinElevationDegrees = 0.;
+
+private:
+    UPROPERTY(EditAnywhere, Category = Firing)
+    float LaunchSpeed = 100 * 1000;
+
+    UPROPERTY(EditAnywhere, Category = Setup)
+    TSubclassOf<AProjectile> ProjectileBlueprint;
+
+    UPROPERTY(EditAnywhere, Category = Setup)
+    double ReloadTimeSeconds = 3;
+
+    double LastFire = 0;
 };

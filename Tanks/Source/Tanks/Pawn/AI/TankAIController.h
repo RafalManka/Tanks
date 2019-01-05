@@ -17,7 +17,10 @@ class TANKS_API ATankAIController : public AAIController {
 public:
     virtual void Tick(float DeltaTime) override;
 
-    virtual void BeginPlay() override;
-
     float AcceptanceRadius = 3000;
+
+private:
+
+    UPROPERTY(EditAnywhere, Category = Firing)
+    float LaunchSpeed = 100 * 1000;
 };

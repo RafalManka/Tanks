@@ -4,13 +4,9 @@
 #include "Pawn/TankAimingComponent.h"
 #include "Pawn/Tank.h"
 
-ATank *ATankPlayerController::GetControlledTank() const {
-    return Cast<ATank>(GetPawn());
-}
-
 void ATankPlayerController::BeginPlay() {
     Super::BeginPlay();
-    auto AimingComponent = GetControlledTank()->FindComponentByClass<UTankAimingComponent>();
+    auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
     if (AimingComponent) {
         FoundAimingComponent(AimingComponent);
         return;
@@ -21,11 +17,11 @@ void ATankPlayerController::BeginPlay() {
 
 void ATankPlayerController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
-    auto PlayerTank = GetControlledTank();
-    if (ensure(PlayerTank)) {
-        PlayerTank->AimAt(GetHitLocation());
+    auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
+    if (ensure(AimingComponent)) {
+        AimingComponent->AimAt(GetHitLocation(), LaunchSpeed);
 
-        FVector LinkStart = PlayerTank->GetActorLocation();
+        FVector LinkStart = GetPawn()->GetActorLocation();
         FVector LinkEnd = GetHitLocation();
         DrawDebugLine(
                 GetWorld(),
