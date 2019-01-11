@@ -3,12 +3,14 @@
 #include "TankPlayerController.h"
 #include "Pawn/TankAimingComponent.h"
 #include "Pawn/Tank.h"
+#include "Pawn/TurretComponent.h"
 
 void ATankPlayerController::BeginPlay() {
     Super::BeginPlay();
-    auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
+
+    auto AimingComponent = GetPawn()->FindComponentByClass<UTurretComponent>();
     if (AimingComponent) {
-        FoundAimingComponent(AimingComponent);
+        FoundTurretComponent(AimingComponent);
         return;
     } else {
         UE_LOG(LogTemp, Warning, TEXT("Player Controller Can't find AimingComponent"));

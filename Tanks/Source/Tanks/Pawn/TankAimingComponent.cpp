@@ -3,10 +3,31 @@
 #include "TankAimingComponent.h"
 #include "TankBarrel.h"
 #include "TurretComponent.h"
+#include "Projectile/Projectile.h"
 #include <EngineClasses.h>
 
 UTankAimingComponent::UTankAimingComponent() {
-    PrimaryComponentTick.bCanEverTick = false;
+    PrimaryComponentTick.bCanEverTick = true;
+}
+
+void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickType,
+                                     FActorComponentTickFunction *ThisTickFunction) {
+    if ((FPlatformTime::Seconds() - LastFire) < ReloadTimeSeconds) {
+        FiringStatus = EFiringStatus::Reloading;
+    } else if (IsBarrelMoving()) {
+        FiringStatus = EFiringStatus::Aiming;
+    } else {
+        FiringStatus = EFiringStatus::Locked;
+    }
+}
+
+bool UTankAimingComponent::IsBarrelMoving() {
+    auto Owner = GetOwner();
+    if (!ensure(Owner)) { return false; }
+    auto Barrel = Owner->FindComponentByClass<UTankBarrel>();
+    if (!ensure(Barrel)) { return false; }
+    auto BarrelForward = Barrel->GetForwardVector();
+    return false; // !BarrelForward.Equals(AimDirection);
 }
 
 void UTankAimingComponent::Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet) {
@@ -17,9 +38,21 @@ void UTankAimingComponent::Initialize(UTankBarrel *BarrelToSet, UTurretComponent
 }
 
 void UTankAimingComponent::Fire() {
-    if (!ensure(Turret)) { return; }
-    Turret->Fire();
+    if (FiringStatus != EFiringStatus::Locked) { return; }
+    auto Owner = GetOwner();
+    if (!ensure(Owner)) { return; }
+    auto Barrel = Owner->FindComponentByClass<UTankBarrel>();
+    if (!ensure(Barrel)) { return; }
+    if (!ensure(ProjectileBlueprint)) { return; }
+    LastFire = FPlatformTime::Seconds();
+    auto Projectile = GetWorld()->SpawnActor<AProjectile>(
+            ProjectileBlueprint,
+            Barrel->GetSocketLocation(FName("Projectile")),
+            Barrel->GetSocketRotation(FName("Projectile"))
+    );
+    Projectile->Launch(LaunchSpeed);
 }
+
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed) {
     if (!ensure(Barrel)) { return; }

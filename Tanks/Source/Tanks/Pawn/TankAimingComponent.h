@@ -5,16 +5,16 @@
 #include "Components/ActorComponent.h"
 #include "TankAimingComponent.generated.h"
 
-UENUM()
-enum class EFiringStatus : uint8 {
-    Reloading, Aiming, Locked
-};
-
 class UTankBarrel;
 
 class UTurretComponent;
 
-//class AProjectile;
+class AProjectile;
+
+UENUM()
+enum class EFiringStatus : uint8 {
+    Reloading, Aiming, Locked
+};
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 
@@ -25,14 +25,15 @@ public:
     UTankAimingComponent();
 
     UFUNCTION(BlueprintCallable, Category = "Setup")
-    void Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet);
 
-    UFUNCTION(BlueprintCallable, Category = "Setup")
-    void Fire();
+    void Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet);
 
     virtual void AimAt(FVector HitLocation, float LaunchSpeed);
 
     void MoveBarrel(FVector AimingDirection);
+
+    UFUNCTION(BlueprintCallable, Category = "Input")
+    void Fire();
 
 protected:
 
@@ -40,8 +41,25 @@ protected:
     EFiringStatus FiringStatus = EFiringStatus::Locked;
 
 private:
+
+    UPROPERTY(EditAnywhere, Category = Setup)
+    TSubclassOf<AProjectile> ProjectileBlueprint;
+
+    virtual void
+    TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
+
     UTankBarrel *Barrel = nullptr;
 
     UTurretComponent *Turret = nullptr;
+
+    UPROPERTY(EditAnywhere, Category = Firing)
+    float LaunchSpeed = 100 * 100;
+
+    double LastFire = FPlatformTime::Seconds();
+
+    UPROPERTY(EditAnywhere, Category = Setup)
+    double ReloadTimeSeconds = 3;
+
+    bool IsBarrelMoving();
 
 };

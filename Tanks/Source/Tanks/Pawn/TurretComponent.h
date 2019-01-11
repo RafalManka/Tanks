@@ -8,6 +8,7 @@
 
 class AProjectile;
 
+
 /**
  * 
  */
@@ -17,8 +18,6 @@ class TANKS_API UTurretComponent : public UStaticMeshComponent {
 
 public:
     void Rotate(float RelativeSpeed);
-
-    void Fire();
 
     UPROPERTY(EditDefaultsOnly, Category = Setup)
     float MaxDegreesPerSecond = 5.;
@@ -30,14 +29,5 @@ public:
     float MinElevationDegrees = 0.;
 
 private:
-    UPROPERTY(EditAnywhere, Category = Firing)
-    float LaunchSpeed = 100 * 1000;
 
-    UPROPERTY(EditAnywhere, Category = Setup)
-    TSubclassOf<AProjectile> ProjectileBlueprint;
-
-    UPROPERTY(EditAnywhere, Category = Setup)
-    double ReloadTimeSeconds = 3;
-
-    double LastFire = 0;
 };
