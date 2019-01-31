@@ -12,13 +12,21 @@ UTankAimingComponent::UTankAimingComponent() {
 
 void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickType,
                                      FActorComponentTickFunction *ThisTickFunction) {
+
+
+    FString Log = "";
     if ((FPlatformTime::Seconds() - LastFire) < ReloadTimeSeconds) {
         FiringStatus = EFiringStatus::Reloading;
+        Log = "Reloading";
     } else if (IsBarrelMoving()) {
         FiringStatus = EFiringStatus::Aiming;
+        Log = "Aiming";
     } else {
         FiringStatus = EFiringStatus::Locked;
+        Log = "Locked";
     }
+
+
 }
 
 bool UTankAimingComponent::IsBarrelMoving() {
@@ -51,6 +59,13 @@ void UTankAimingComponent::Fire() {
             Barrel->GetSocketRotation(FName("Projectile"))
     );
     Projectile->Launch(LaunchSpeed);
+
+    UE_LOG(
+            LogTemp,
+            Warning,
+            TEXT("UTankAimingComponent::Fire: LaunchSpeed=%f"),
+            LaunchSpeed
+    );
 }
 
 

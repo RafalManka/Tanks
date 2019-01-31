@@ -14,6 +14,11 @@ UCLASS(meta = (BlueprintSpawnableComponent))
 class TANKS_API UTankTrackComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 
+private:
+    UTankTrackComponent();
+
+    void TickComponent(float DeltaTime, enum ELevelTick TickType,
+                                            FActorComponentTickFunction *ThisTickFunction) override;
 public:
     UFUNCTION(BlueprintCallable, Category = Input)
 

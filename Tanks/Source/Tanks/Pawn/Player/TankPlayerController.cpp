@@ -8,9 +8,9 @@
 void ATankPlayerController::BeginPlay() {
     Super::BeginPlay();
 
-    auto AimingComponent = GetPawn()->FindComponentByClass<UTurretComponent>();
-    if (AimingComponent) {
-        FoundTurretComponent(AimingComponent);
+    auto TankAimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
+    if (TankAimingComponent) {
+        FoundAimingComponent(TankAimingComponent);
         return;
     } else {
         UE_LOG(LogTemp, Warning, TEXT("Player Controller Can't find AimingComponent"));
@@ -19,6 +19,7 @@ void ATankPlayerController::BeginPlay() {
 
 void ATankPlayerController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
+    if(!GetPawn()){ return; }
     auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
     if (ensure(AimingComponent)) {
         AimingComponent->AimAt(GetHitLocation(), LaunchSpeed);

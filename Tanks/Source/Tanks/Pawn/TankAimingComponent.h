@@ -61,5 +61,4 @@ private:
     double ReloadTimeSeconds = 3;
 
     bool IsBarrelMoving();
-
 };

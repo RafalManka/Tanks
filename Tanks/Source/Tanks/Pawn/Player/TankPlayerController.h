@@ -7,7 +7,7 @@
 #include "DrawDebugHelpers.h"
 #include "TankPlayerController.generated.h"
 
-class UTurretComponent;
+class UTankAimingComponent;
 /**
  * Responsible for letting the player play
  */
@@ -20,7 +20,7 @@ protected:
 
     UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 
-    void FoundTurretComponent(UTurretComponent *TurretComponentRef);
+    void FoundAimingComponent(UTankAimingComponent *TankAimingComponent);
 
 private:
     void BeginPlay() override;
