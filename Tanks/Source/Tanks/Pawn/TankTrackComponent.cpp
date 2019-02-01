@@ -6,14 +6,33 @@ UTankTrackComponent::UTankTrackComponent() {
     PrimaryComponentTick.bCanEverTick = true;
 }
 
+void UTankTrackComponent::BeginPlay() {
+    Super::BeginPlay();
+    OnComponentHit.AddDynamic(this, &UTankTrackComponent::OnHit);
+}
+
+void UTankTrackComponent::OnHit(
+        UPrimitiveComponent *HitComponent,
+        AActor *OtherActor,
+        UPrimitiveComponent *OtherComponent,
+        FVector NormalImpulse,
+        const FHitResult &Hit
+) {
+    UE_LOG(
+            LogTemp,
+            Warning,
+            TEXT("UTankTrackComponent::OnHit")
+    );
+}
+
 void UTankTrackComponent::TickComponent(float DeltaTime, enum ELevelTick TickType,
-        FActorComponentTickFunction *ThisTickFunction) {
+                                        FActorComponentTickFunction *ThisTickFunction) {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
     // UE_LOG(LogTemp, Warning, TEXT("UTankTrackComponent TickComponent"));
     auto SlippageSpeed = FVector::DotProduct(GetRightVector(), GetComponentVelocity());
-    auto CorrectionAcceleration = - SlippageSpeed / DeltaTime * GetRightVector();
+    auto CorrectionAcceleration = -SlippageSpeed / DeltaTime * GetRightVector();
     auto Owner = GetOwner();
-    if(!ensure(Owner)){return;}
+    if (!ensure(Owner)) { return; }
     auto TankRoot = Cast<UStaticMeshComponent>(Owner->GetRootComponent());
     auto CorrectionForce = (TankRoot->GetMass() * CorrectionAcceleration) / 2;
     TankRoot->AddForce(CorrectionForce);

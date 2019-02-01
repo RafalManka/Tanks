@@ -15,10 +15,26 @@ class TANKS_API UTankTrackComponent : public UStaticMeshComponent {
     GENERATED_BODY()
 
 private:
+
+    virtual void BeginPlay() override;
+
     UTankTrackComponent();
 
-    void TickComponent(float DeltaTime, enum ELevelTick TickType,
-                                            FActorComponentTickFunction *ThisTickFunction) override;
+    UFUNCTION()
+    void OnHit(
+            UPrimitiveComponent *HitComponent,
+            AActor *OtherActor,
+            UPrimitiveComponent *OtherComponent,
+            FVector NormalImpulse,
+            const FHitResult &Hit
+    );
+
+    void TickComponent(
+            float DeltaTime,
+            enum ELevelTick TickType,
+            FActorComponentTickFunction *ThisTickFunction
+    ) override;
+
 public:
     UFUNCTION(BlueprintCallable, Category = Input)
 
