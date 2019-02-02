@@ -14,9 +14,13 @@ UCLASS()
 class TANKS_API ATankAIController : public AAIController {
     GENERATED_BODY()
 
-public:
-    virtual void Tick(float DeltaTime) override;
+protected:
 
-    float AcceptanceRadius = 3000;
+    UPROPERTY(EditAnywhere, Category = "Setup")
+    float AcceptanceRadius = 80000;
+
+public:
+
+    virtual void Tick(float DeltaTime) override;
 
 };
