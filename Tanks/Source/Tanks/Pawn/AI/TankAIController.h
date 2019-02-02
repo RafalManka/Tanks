@@ -19,8 +19,4 @@ public:
 
     float AcceptanceRadius = 3000;
 
-private:
-
-    UPROPERTY(EditAnywhere, Category = Firing)
-    float LaunchSpeed = 100 * 1000;
 };

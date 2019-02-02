@@ -28,12 +28,14 @@ public:
 
     void Initialize(UTankBarrel *BarrelToSet, UTurretComponent *TurretToSet);
 
-    virtual void AimAt(FVector HitLocation, float LaunchSpeed);
+    virtual void AimAt(FVector HitLocation);
 
     void MoveBarrel(FVector AimingDirection);
 
     UFUNCTION(BlueprintCallable, Category = "Input")
     void Fire();
+
+    EFiringStatus GetFiringState() const;
 
 protected:
 
@@ -52,13 +54,13 @@ private:
 
     UTurretComponent *Turret = nullptr;
 
-    UPROPERTY(EditAnywhere, Category = Firing)
-    float LaunchSpeed = 100 * 100;
-
     double LastFire = FPlatformTime::Seconds();
 
     UPROPERTY(EditAnywhere, Category = Setup)
     double ReloadTimeSeconds = 3;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Firing")
+    float LaunchSpeed = 4000;
 
     bool IsBarrelMoving();
 };

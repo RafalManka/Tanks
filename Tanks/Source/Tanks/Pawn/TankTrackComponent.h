@@ -29,11 +29,13 @@ private:
             const FHitResult &Hit
     );
 
-    void TickComponent(
-            float DeltaTime,
-            enum ELevelTick TickType,
-            FActorComponentTickFunction *ThisTickFunction
-    ) override;
+    virtual void TickComponent(float DeltaTime, enum ELevelTick TickType,
+                                            FActorComponentTickFunction *ThisTickFunction) override;
+    void ApplySidewaysForce();
+
+    void DriveTrack();
+
+    float CurrentThrottle = 0;
 
 public:
     UFUNCTION(BlueprintCallable, Category = Input)
@@ -44,4 +46,6 @@ public:
     UPROPERTY(EditDefaultsOnly, Category = Firing)
     float MaxDrivingForce = 400 * 1000; // Assume 40 ton tank and 1g acceleration
 
+    void
+    ApplySidewaysForce(float DeltaTime, const ELevelTick &TickType, const FActorComponentTickFunction *ThisTickFunction);
 };
