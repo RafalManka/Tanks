@@ -12,6 +12,7 @@ UTankAimingComponent::UTankAimingComponent() {
 
 void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickType,
                                          FActorComponentTickFunction *ThisTickFunction) {
+	AmmoStatus = AmmoCount > 0 ? EAmmoStatus::Available : EAmmoStatus::Empty;
     if ((FPlatformTime::Seconds() - LastFire) < ReloadTimeSeconds) {
         FiringStatus = EFiringStatus::Reloading;
     } else if (IsBarrelMoving()) {
@@ -51,6 +52,7 @@ void UTankAimingComponent::Fire() {
             Barrel->GetSocketRotation(FName("Projectile"))
     );
     Projectile->Launch(LaunchSpeed);
+	AmmoCount--;
 }
 
 
@@ -92,4 +94,9 @@ void UTankAimingComponent::MoveBarrel(FVector AimingDirection) {
 
 EFiringStatus UTankAimingComponent::GetFiringState() const {
     return FiringStatus;
+}
+
+EAmmoStatus UTankAimingComponent::GetAmmoStatus() const
+{
+	return AmmoStatus;
 }

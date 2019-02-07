@@ -16,6 +16,11 @@ enum class EFiringStatus : uint8 {
     Reloading, Aiming, Locked
 };
 
+UENUM()
+enum class EAmmoStatus : uint8 {
+	Available, Empty
+};
+
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 
 class TANKS_API UTankAimingComponent : public UActorComponent {
@@ -37,10 +42,19 @@ public:
 
     EFiringStatus GetFiringState() const;
 
+	EAmmoStatus GetAmmoStatus() const;
+
+
 protected:
 
     UPROPERTY(BlueprintReadOnly, Category = "State")
     EFiringStatus FiringStatus = EFiringStatus::Locked;
+
+	UPROPERTY(BlueprintReadOnly, Category = "State")
+	EAmmoStatus AmmoStatus = EAmmoStatus::Available;
+
+	UPROPERTY(BlueprintReadOnly, Category = "State")
+	float AmmoCount = 10;
 
 private:
 
@@ -63,4 +77,5 @@ private:
     float LaunchSpeed = 4000;
 
     bool IsBarrelMoving();
+
 };
