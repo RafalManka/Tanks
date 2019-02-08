@@ -9,6 +9,7 @@
 class UTankProjectileMovement;
 class UCollisionMesh;
 class UParticleSystemComponent;
+class URadialForceComponent;
 
 UCLASS()
 
@@ -45,4 +46,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 		UParticleSystemComponent* ImpactBlast = nullptr;
+
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+		URadialForceComponent* ExplosionForce = nullptr;
+		//URadialForceComponent* ExplosionForce = nullptr;
 };

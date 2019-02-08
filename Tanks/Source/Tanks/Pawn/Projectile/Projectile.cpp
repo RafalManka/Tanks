@@ -5,6 +5,7 @@
 #include "LaunchBlast.h"
 #include "ImpactBlast.h"
 #include "CollisionMesh.h"
+#include "PhysicsEngine/RadialForceComponent.h"
 
 AProjectile::AProjectile() {
 	PrimaryActorTick.bCanEverTick = true;
@@ -23,6 +24,10 @@ AProjectile::AProjectile() {
 	ImpactBlast = CreateDefaultSubobject<UImpactBlast>(FName("Impact Blast"));
 	ImpactBlast->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 	ImpactBlast->bAutoActivate = false;
+	// Explosion Force
+	ExplosionForce = CreateDefaultSubobject<URadialForceComponent>(FName("Explosion Force"));
+	ExplosionForce->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+
 }
 
 void AProjectile::Launch(float Speed) {
@@ -47,6 +52,9 @@ void AProjectile::OnHit(
 
 	LaunchBlast->Deactivate();
 	ImpactBlast->Activate();
+	ExplosionForce->FireImpulse();
+	SetRootComponent(ImpactBlast);
+	CollisionMesh->DestroyComponent();
 }
 
 void AProjectile::Tick(float DeltaTime) {
