@@ -6,7 +6,7 @@
 
 void ATankAIController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
-    auto AITank = Cast<ATank>(GetPawn());
+    auto AITank = GetPawn();
     if (!ensure(AITank)) { return; }
 
     auto AimingComponent = AITank->FindComponentByClass<UTankAimingComponent>();

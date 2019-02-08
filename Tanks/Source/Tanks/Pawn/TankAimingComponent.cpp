@@ -47,7 +47,7 @@ void UTankAimingComponent::Initialize(UTankBarrel *BarrelToSet, UTurretComponent
 }
 
 void UTankAimingComponent::Fire() {
-    if (FiringStatus != EFiringStatus::Locked || FiringStatus != EFiringStatus::Aiming) { return; }
+    if (FiringStatus == EFiringStatus::Reloading || FiringStatus == EFiringStatus::NoAmmo) { return; }
     auto Owner = GetOwner();
     if (!ensure(Owner)) { return; }
     auto Barrel = Owner->FindComponentByClass<UTankBarrel>();
@@ -86,13 +86,10 @@ void UTankAimingComponent::AimAt(FVector HitLocation) {
 }
 
 void UTankAimingComponent::MoveBarrel(FVector AimingDirection) {
-
-
     auto AimRotation = AimingDirection.Rotation();
     auto BarrelRotation = Barrel->GetForwardVector().Rotation();
     auto DeltaRotator = AimRotation - BarrelRotation;
     Barrel->Elevate(DeltaRotator.Pitch);
-
     if (FMath::Abs(DeltaRotator.Yaw) < 180) {
         Turret->Rotate(DeltaRotator.Yaw);
     } else {
