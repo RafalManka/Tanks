@@ -33,6 +33,20 @@ void AProjectile::Launch(float Speed) {
 
 void AProjectile::BeginPlay() {
 	Super::BeginPlay();
+	CollisionMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
+}
+
+void AProjectile::OnHit(
+	UPrimitiveComponent *HitComponent,
+	AActor *OtherActor,
+	UPrimitiveComponent *OtherComponent,
+	FVector NormalImpulse,
+	const FHitResult &Hit
+) {
+	UE_LOG(LogTemp, Log, TEXT("On projectile HIT"));
+
+	LaunchBlast->Deactivate();
+	ImpactBlast->Activate();
 }
 
 void AProjectile::Tick(float DeltaTime) {

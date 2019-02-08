@@ -12,40 +12,40 @@
 UCLASS(meta = (BlueprintSpawnableComponent))
 
 class TANKS_API UTankTrackComponent : public UStaticMeshComponent {
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 private:
 
-    virtual void BeginPlay() override;
+	virtual void BeginPlay() override;
 
-    UTankTrackComponent();
+	UTankTrackComponent();
 
-    UFUNCTION()
-    void OnHit(
-            UPrimitiveComponent *HitComponent,
-            AActor *OtherActor,
-            UPrimitiveComponent *OtherComponent,
-            FVector NormalImpulse,
-            const FHitResult &Hit
-    );
+	UFUNCTION()
+		void OnHit(
+			UPrimitiveComponent *HitComponent,
+			AActor *OtherActor,
+			UPrimitiveComponent *OtherComponent,
+			FVector NormalImpulse,
+			const FHitResult &Hit
+		);
 
-    virtual void TickComponent(float DeltaTime, enum ELevelTick TickType,
-                                            FActorComponentTickFunction *ThisTickFunction) override;
-    void ApplySidewaysForce();
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType,
+		FActorComponentTickFunction *ThisTickFunction) override;
+	void ApplySidewaysForce();
 
-    void DriveTrack();
+	void DriveTrack();
 
-    float CurrentThrottle = 0;
+	float CurrentThrottle = 0;
 
 public:
-    UFUNCTION(BlueprintCallable, Category = Input)
+	UFUNCTION(BlueprintCallable, Category = Input)
 
-    void SetThrottle(float Throttle);
+		void SetThrottle(float Throttle);
 
-    // Max force per track in Newtons
-    UPROPERTY(EditDefaultsOnly, Category = Firing)
-    float MaxDrivingForce = 400 * 1000; // Assume 40 ton tank and 1g acceleration
+	// Max force per track in Newtons
+	UPROPERTY(EditDefaultsOnly, Category = Firing)
+		float MaxDrivingForce = 400 * 1000; // Assume 40 ton tank and 1g acceleration
 
-    void
-    ApplySidewaysForce(float DeltaTime, const ELevelTick &TickType, const FActorComponentTickFunction *ThisTickFunction);
+	void
+		ApplySidewaysForce(float DeltaTime, const ELevelTick &TickType, const FActorComponentTickFunction *ThisTickFunction);
 };
