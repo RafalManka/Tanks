@@ -6,10 +6,10 @@
 
 void ATankAIController::Tick(float DeltaTime) {
     Super::Tick(DeltaTime);
-    auto AITank = GetPawn();
-    if (!ensure(AITank)) { return; }
+    auto Pawn = GetPawn();
+    if (!ensure(Pawn)) { return; }
 
-    auto AimingComponent = AITank->FindComponentByClass<UTankAimingComponent>();
+    auto AimingComponent = Pawn->FindComponentByClass<UTankAimingComponent>();
     auto PlayerTank = Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
 
     if (!ensure(PlayerTank)) { return; }
@@ -22,7 +22,7 @@ void ATankAIController::Tick(float DeltaTime) {
         AimingComponent->Fire();
     }
 
-    FVector LinkStart = AITank->GetActorLocation();
+    FVector LinkStart = Pawn->GetActorLocation();
     FVector LinkEnd = PlayerTank->GetActorLocation();
     DrawDebugLine(
             GetWorld(),
