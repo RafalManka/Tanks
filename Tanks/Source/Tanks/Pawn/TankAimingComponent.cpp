@@ -47,7 +47,7 @@ void UTankAimingComponent::Initialize(UTankBarrel *BarrelToSet, UTurretComponent
 }
 
 void UTankAimingComponent::Fire() {
-    if (FiringStatus != EFiringStatus::Locked) { return; }
+    if (FiringStatus != EFiringStatus::Locked || FiringStatus != EFiringStatus::Aiming) { return; }
     auto Owner = GetOwner();
     if (!ensure(Owner)) { return; }
     auto Barrel = Owner->FindComponentByClass<UTankBarrel>();
