@@ -13,7 +13,7 @@ class AProjectile;
 
 UENUM()
 enum class EFiringStatus : uint8 {
-    Reloading, Aiming, Locked
+    Reloading, Aiming, Locked, NoAmmo
 };
 
 UENUM()

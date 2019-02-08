@@ -12,14 +12,22 @@ UTankAimingComponent::UTankAimingComponent() {
 
 void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickType,
                                          FActorComponentTickFunction *ThisTickFunction) {
-	AmmoStatus = AmmoCount > 0 ? EAmmoStatus::Available : EAmmoStatus::Empty;
-    if ((FPlatformTime::Seconds() - LastFire) < ReloadTimeSeconds) {
-        FiringStatus = EFiringStatus::Reloading;
-    } else if (IsBarrelMoving()) {
-        FiringStatus = EFiringStatus::Aiming;
-    } else {
-        FiringStatus = EFiringStatus::Locked;
-    }
+	if (AmmoCount > 0) {
+		AmmoStatus = EAmmoStatus::Available;
+		if ((FPlatformTime::Seconds() - LastFire) < ReloadTimeSeconds) {
+			FiringStatus = EFiringStatus::Reloading;
+		}
+		else if (IsBarrelMoving()) {
+			FiringStatus = EFiringStatus::Aiming;
+		}
+		else {
+			FiringStatus = EFiringStatus::Locked;
+		}
+	}
+	else {
+		AmmoStatus = EAmmoStatus::Empty;
+		FiringStatus = EFiringStatus::NoAmmo;
+	}
 }
 
 bool UTankAimingComponent::IsBarrelMoving() {
