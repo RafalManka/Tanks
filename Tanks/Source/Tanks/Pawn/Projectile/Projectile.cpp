@@ -2,26 +2,41 @@
 
 #include "Projectile.h"
 #include "TankProjectileMovement.h"
+#include "LaunchBlast.h"
+#include "ImpactBlast.h"
+#include "CollisionMesh.h"
 
 AProjectile::AProjectile() {
-    PrimaryActorTick.bCanEverTick = true;
-
-    Movement = CreateDefaultSubobject<UTankProjectileMovement>(FName("Projectile Movement"));
-    Movement->bAutoActivate = false;
+	PrimaryActorTick.bCanEverTick = true;
+	// Movement
+	Movement = CreateDefaultSubobject<UTankProjectileMovement>(FName("Projectile Movement"));
+	Movement->bAutoActivate = false;
+	// Collision Mesh
+	CollisionMesh = CreateDefaultSubobject<UCollisionMesh>(FName("Collision Mesh"));
+	SetRootComponent(CollisionMesh);
+	CollisionMesh->SetNotifyRigidBodyCollision(true);
+	CollisionMesh->SetVisibility(false);
+	// Launch Blast
+	LaunchBlast = CreateDefaultSubobject<ULaunchBlast>(FName("Launch Blast"));
+	LaunchBlast->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	// Impact blast
+	ImpactBlast = CreateDefaultSubobject<UImpactBlast>(FName("Impact Blast"));
+	ImpactBlast->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	ImpactBlast->bAutoActivate = false;
 }
 
 void AProjectile::Launch(float Speed) {
-    auto Time = GetWorld()->GetTimeSeconds();
-    Movement->SetVelocityInLocalSpace(FVector::ForwardVector * Speed);
-    Movement->Activate();
+	auto Time = GetWorld()->GetTimeSeconds();
+	Movement->SetVelocityInLocalSpace(FVector::ForwardVector * Speed);
+	Movement->Activate();
 }
 
 void AProjectile::BeginPlay() {
-    Super::BeginPlay();
+	Super::BeginPlay();
 }
 
 void AProjectile::Tick(float DeltaTime) {
-    Super::Tick(DeltaTime);
+	Super::Tick(DeltaTime);
 
 }
 

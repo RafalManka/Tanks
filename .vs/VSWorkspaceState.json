@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Tanks",
+    "\\Tanks\\Source",
+    "\\Tanks\\Source\\Tanks",
+    "\\Tanks\\Source\\Tanks\\Pawn",
+    "\\Tanks\\Source\\Tanks\\Pawn\\Projectile"
+  ],
+  "SelectedNode": "\\Tanks\\Source\\Tanks\\Pawn\\TankAimingComponent.h",
+  "PreviewInSolutionExplorer": false
+}

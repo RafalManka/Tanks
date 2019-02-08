@@ -7,23 +7,33 @@
 #include "Projectile.generated.h"
 
 class UTankProjectileMovement;
+class UCollisionMesh;
+class UParticleSystemComponent;
 
 UCLASS()
 
 class TANKS_API AProjectile : public AActor {
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 public:
-    AProjectile();
+	AProjectile();
 
-    virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime) override;
 
-    virtual void Launch(float Speed);
+	virtual void Launch(float Speed);
 
 protected:
-    virtual void BeginPlay() override;
+	virtual void BeginPlay() override;
 
 private:
-    UTankProjectileMovement *Movement = nullptr;
+	UTankProjectileMovement *Movement = nullptr;
 
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+		UCollisionMesh* CollisionMesh = nullptr;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+		UParticleSystemComponent* LaunchBlast = nullptr;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+		UParticleSystemComponent* ImpactBlast = nullptr;
 };
