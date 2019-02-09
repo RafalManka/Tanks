@@ -5,6 +5,8 @@
 #include "LaunchBlast.h"
 #include "ImpactBlast.h"
 #include "CollisionMesh.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameFramework/DamageType.h"
 #include "PhysicsEngine/RadialForceComponent.h"
 
 AProjectile::AProjectile() {
@@ -48,13 +50,30 @@ void AProjectile::OnHit(
 	FVector NormalImpulse,
 	const FHitResult &Hit
 ) {
-	UE_LOG(LogTemp, Log, TEXT("On projectile HIT"));
-
+	// UE_LOG(LogTemp, Log, TEXT("On projectile HIT"));
 	LaunchBlast->Deactivate();
 	ImpactBlast->Activate();
 	ExplosionForce->FireImpulse();
 	SetRootComponent(ImpactBlast);
 	CollisionMesh->DestroyComponent();
+
+	UGameplayStatics::ApplyRadialDamage(
+		this,
+		Damage,
+		GetActorLocation(),
+		ExplosionForce->Radius,
+		UDamageType::StaticClass(),
+		TArray<AActor*>() // damage all actors
+	);
+
+	UWorld* AWorld = GetWorld();
+	if (!ensure(AWorld)) { return; }
+	FTimerHandle Timer;
+	AWorld->GetTimerManager().SetTimer(Timer, this, &AProjectile::OnTimerExpire, DestroyDelay, false);
+}
+
+void AProjectile::OnTimerExpire() {
+	Destroy();
 }
 
 void AProjectile::Tick(float DeltaTime) {

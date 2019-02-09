@@ -27,6 +27,11 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		float Damage = 80;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		float DestroyDelay = 10;
 
 	UFUNCTION()
 		void OnHit(
@@ -36,6 +41,7 @@ private:
 			FVector NormalImpulse,
 			const FHitResult &Hit
 		);
+	void OnTimerExpire();
 	UTankProjectileMovement *Movement = nullptr;
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -50,5 +56,5 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 		URadialForceComponent* ExplosionForce = nullptr;
-		//URadialForceComponent* ExplosionForce = nullptr;
+	//URadialForceComponent* ExplosionForce = nullptr;
 };
