@@ -14,6 +14,23 @@ void ATankPlayerController::BeginPlay()
     FoundAimingComponent(AimingComponent);
 }
 
+void ATankPlayerController::OnPosessedTankDeath()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Player Tank Died!"));
+	StartSpectatingOnly();
+}
+
+void ATankPlayerController::SetPawn(APawn * InPawn)
+{
+	Super::SetPawn(InPawn);
+	if (InPawn) {
+		auto PosessedTank = Cast<ATank>(InPawn);
+		if (!ensure(PosessedTank)) { return; }
+		PosessedTank->OnDeath.AddUniqueDynamic(this, &ATankPlayerController::OnPosessedTankDeath);
+	}
+
+}
+
 void ATankPlayerController::Tick(float DeltaTime)
 {
     Super::Tick( DeltaTime );

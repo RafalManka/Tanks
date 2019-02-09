@@ -54,7 +54,7 @@ protected:
 	EAmmoStatus AmmoStatus = EAmmoStatus::Available;
 
 	UPROPERTY(BlueprintReadOnly, Category = "State")
-	int32 AmmoCount = 3;
+	int32 AmmoCount = 10;
 
 private:
 
