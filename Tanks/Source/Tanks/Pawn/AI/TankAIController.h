@@ -12,15 +12,21 @@ class ATank;
 UCLASS()
 
 class TANKS_API ATankAIController : public AAIController {
-    GENERATED_BODY()
-
-protected:
-
-    UPROPERTY(EditAnywhere, Category = "Setup")
-    float AcceptanceRadius = 80000;
+	GENERATED_BODY()
 
 public:
 
-    virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime) override;
+protected:
+
+	UPROPERTY(EditAnywhere, Category = "Setup")
+	float AcceptanceRadius = 80000;
+
+private:
+
+	UFUNCTION()
+	void OnPosessedTankDeath();
+
+	void SetPawn(APawn* InPawn);
 
 };

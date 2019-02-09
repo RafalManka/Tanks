@@ -6,6 +6,8 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTankDelegate);
+
 UCLASS()
 
 class TANKS_API ATank : public APawn {
@@ -15,6 +17,8 @@ public:
 	// Returns current health as a percentage of starting health from 0 to 1
 	UFUNCTION(BlueprintPure, Category = "Health")
 	float GetHealthPercent();
+
+	FTankDelegate OnDeath;
 
 private:
 
