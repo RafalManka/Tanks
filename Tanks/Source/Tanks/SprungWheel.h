@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+// #include "Runtime/Engine/Classes/PhysicsEngine/PhysicsConstraintComponent.h"
 #include "SprungWheel.generated.h"
+
+class UPhysicsConstraintComponent;
 
 UCLASS()
 class TANKS_API ASprungWheel : public AActor
@@ -23,4 +26,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+private:
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UStaticMeshComponent* Mass = nullptr;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UStaticMeshComponent* Wheel = nullptr;
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UPhysicsConstraintComponent* Spring = nullptr;
 };
